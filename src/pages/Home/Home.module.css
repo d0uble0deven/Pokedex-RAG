@@ -1,0 +1,151 @@
+/* Home / Landing page */
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  gap: 48px;
+}
+
+/* ========== Hero ========== */
+.hero {
+  text-align: center;
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.heroHighlight {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--success) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ========== Feature cards ========== */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.featureCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+}
+
+.featureCard:hover {
+  background-color: var(--bg-elevated);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.featureDescription {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.featureArrow {
+  color: var(--text-tertiary);
+  transition: all 0.2s;
+}
+
+.featureCard:hover .featureArrow {
+  color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+/* ========== Footer ========== */
+.footer {
+  text-align: center;
+}
+
+.footerText {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .page {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .featureCard {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .featureIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .featureIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .featureTitle {
+    font-size: 16px;
+  }
+
+  .featureDescription {
+    font-size: 13px;
+  }
+}
